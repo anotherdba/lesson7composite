@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: ls
-      - uses: ./action.yml
         id: compositeAction
         with:
+          path: .
           number1: 4
           number2: 2
       - run: echo ${{ steps.compositeAction.outputs.result }} 
