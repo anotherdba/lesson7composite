@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ls
-      - uses: .
+      - uses: ./action.yml
         id: compositeAction
         with:
           number1: 4
